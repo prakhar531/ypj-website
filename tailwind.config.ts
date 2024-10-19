@@ -17,6 +17,7 @@ const config: Config = {
         "start-gold": "#f6e196",
         "mid-gold": "#c9a65d",
         "end-gold": "#af8540",
+        "web-background": "zinc-900",
 
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -66,8 +67,15 @@ const config: Config = {
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",
@@ -97,6 +105,7 @@ const config: Config = {
     },
   ],
 };
+
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
