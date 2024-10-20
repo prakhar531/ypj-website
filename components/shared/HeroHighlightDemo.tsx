@@ -9,7 +9,7 @@ export function HeroHighlightDemo() {
   return (
     <HeroHighlight>
       <div className="wrapper flex justify-evenly">
-        <div className="flex justify-center items-center flex-1 px-1">
+        <div className="flex justify-center items-center w-1/2 px-1">
           <div className="flex flex-col">
             <div className="text-4xl mx-auto font-normal text-white">
               <FlipWords words={words} className="text-7xl font-bold " />
