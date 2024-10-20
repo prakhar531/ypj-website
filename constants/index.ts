@@ -1,22 +1,18 @@
 export const headerLinks = [
   {
     label: "Home",
-    route: "#hero",
+    route: "#home",
   },
   {
     label: "About Us",
-    route: "#about",
+    route: "#aboutus",
   },
   {
     label: "Our Products",
     route: "#products",
   },
   {
-    label: "Gallery",
-    route: "#gallery",
-  },
-  {
     label: "Contact Us",
-    route: "#contact",
+    route: "#contactus",
   },
 ];
