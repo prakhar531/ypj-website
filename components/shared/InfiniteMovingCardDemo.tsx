@@ -12,14 +12,11 @@ export function InfiniteMovingCardsDemo() {
     "2k+ Exquisite Jewelry Pieces in Our Collection",
     "60+ Years of Unmatched Craftsmanship and Expertise",
     "Exclusive Festival Offers and Discounts, Year After Year",
-    "20k+ Satisfied Customers, Continuing a Legacy of Trust Since 1960",
+    "20k+ Satisfied Customers, Continuing our Legacy of Trust",
   ];
   return (
     <HeroHighlight>
-      <div
-        className="wrapper mx-auto py-10 md:px-2 lg:px-4 md:py-32"
-        id="testimonials"
-      >
+      <div className="mx-auto py-10 md:px-2 lg:px-4 md:py-32" id="testimonials">
         <div className="flex flex-col gap-2 justify-center items-center">
           <div className="text-3xl md:text-6xl mb-4 max-w-4xl font-bold">
             <div className="heading text-white">

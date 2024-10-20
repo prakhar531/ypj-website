@@ -1,6 +1,5 @@
 "use client";
 import { CardStack } from "../ui/card-stack";
-import { cn } from "@/lib/utils";
 export function CardStackDemo() {
   return (
     <div className="h-[35rem] flex items-center justify-center">
