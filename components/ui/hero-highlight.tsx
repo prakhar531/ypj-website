@@ -29,7 +29,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative h-[30rem] md:h-[45rem] w-full group",
+        "relative h-[42rem] md:h-[45rem] w-full group",
         containerClassName
       )}
       onMouseMove={handleMouseMove}

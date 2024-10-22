@@ -7,7 +7,7 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 export function ThreeDCardDemo() {
   return (
     <CardContainer className="inter-var z-20">
-      <CardBody className="relative group/card w-auto sm:w-[30rem] h-auto rounded-xl p-6">
+      <CardBody className="relative group/card w-auto sm:w-[30rem] h-auto rounded-xl md:p-4 p-2 ">
         <CardItem translateZ="100" className="w-full">
           <Image
             src="/assets/images/ypjenglish.png"

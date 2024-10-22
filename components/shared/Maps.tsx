@@ -3,7 +3,7 @@ import React from "react";
 const Maps = () => {
   return (
     <div className="w-full mx-auto py-10 md:px-2 lg:px-4 md:py-24">
-      <div className="flex flex-col gap-2 justify-center items-center">
+      <div className="hidden md:flex flex-col gap-2 justify-center items-center">
         <div className="text-3xl md:text-6xl mb-4 max-w-4xl font-bold">
           <div className="heading text-white">
             Visit our{" "}
@@ -14,7 +14,7 @@ const Maps = () => {
         </div>
       </div>
       <div
-        className="overflow-hidden relative h-0 mt-5 md:mt-10"
+        className="hidden md:flex overflow-hidden relative h-0 mt-5 md:mt-10"
         style={{ paddingBottom: "30%" }}
       >
         <iframe

@@ -8,7 +8,7 @@ export const headerLinks = [
     route: "#aboutus",
   },
   {
-    label: "Our Products",
+    label: "Products",
     route: "#products",
   },
   {
@@ -73,5 +73,23 @@ export const footerContactUS = [
     links:
       "https://www.google.com/maps/place/Yogendra+Prasad+Jewellers/@25.3155825,85.2785092,17z/data=!3m1!4b1!4m6!3m5!1s0x39f297c8065c2ccb:0x47de3ba29af4c31e!8m2!3d25.3155825!4d85.2810895!16s%2Fg%2F11jfcnwvwc?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D",
     content: "Arya Samaj Road, Hilsa, Nalanda",
+  },
+];
+
+export const socialFollow = [
+  {
+    id: 1,
+    img: "/assets/social/facebook.svg",
+    links: "#",
+  },
+  {
+    id: 2,
+    img: "/assets/social/x-twitter.svg",
+    links: "#",
+  },
+  {
+    id: 3,
+    img: "/assets/social/nstagram.svg",
+    links: "#",
   },
 ];

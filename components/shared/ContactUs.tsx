@@ -5,7 +5,7 @@ import { SignupFormDemo } from "./Form";
 
 const ContactUs = () => {
   return (
-    <div className="h-[30-rem] relative mb-10">
+    <div className="h-[60-rem] relative mb-10">
       <div className="h-[40rem] absolute left-10 top-0 z-20 ">
         <TextHoverEffect text="YPJ ere 1960" />
       </div>

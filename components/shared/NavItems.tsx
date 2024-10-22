@@ -8,7 +8,7 @@ const NavItems = () => {
   const pathname = usePathname();
 
   return (
-    <ul className="md:flex-between flex w-full flex-col items-start gap-5 md:flex-row ">
+    <ul className="md:flex-between flex w-full flex-col items-start gap-6 md:flex-row ">
       {headerLinks.map((link) => {
         const isActive = pathname === link.route;
         return (
@@ -16,9 +16,14 @@ const NavItems = () => {
             key={link.route}
             className={`${
               isActive && "text-primary-500"
-            } flex-center p-medium-16 whitespace-nowrap text-white`}
+            } flex-center whitespace-nowrap text-white font-semibold text-lg`}
           >
-            <Link href={link.route}>{link.label}</Link>
+            <Link
+              href={link.route}
+              className="hover:text-start-gold hover:text-xl transition-all duration-300 ease-in-out"
+            >
+              {link.label}
+            </Link>
           </li>
         );
       })}

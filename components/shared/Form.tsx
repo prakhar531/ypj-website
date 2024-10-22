@@ -12,7 +12,7 @@ export function SignupFormDemo() {
     console.log("Form submitted");
   };
   return (
-    <div className="max-w-lg w-full mx-auto rounded-none md:rounded-2xl p-4 md:px-10 md:py-8 shadow-[0px_0px_1px_1px_var(--neutral-700)] bg-zinc-950 z-40">
+    <div className="max-w-lg w-full mx-auto rounded-xl md:rounded-2xl p-8 md:px-10 md:py-8 shadow-[0px_0px_1px_1px_var(--neutral-700)] bg-zinc-950 z-40">
       <div className="flex flex-col justify-center items-center">
         <div className="font-bold text-xl md:text-3xl text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text">
           Contact Us
@@ -21,7 +21,7 @@ export function SignupFormDemo() {
           Get in touch with us for any questions, feedback, or support,
         </div>
       </div>
-      <div className="bg-gradient-to-r from-transparent via-end-gold to-transparent my-8 h-[1px] w-full" />
+      <div className="bg-gradient-to-r from-transparent via-end-gold to-transparent my-4 md:my-8 h-[1px] w-full" />
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>

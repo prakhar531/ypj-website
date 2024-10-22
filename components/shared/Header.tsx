@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <>
       <header className="w-full">
-        <div className="wrapper flex items-center justify-between">
+        <div className="max-w-7xl lg:mx-auto p-3 md:px-10 xl:px-0 flex items-center justify-between">
           <Link href="/" className="">
             <div className="flex">
               <Image
@@ -20,7 +20,7 @@ const Header = () => {
             </div>
           </Link>
 
-          <nav className="md:flex-between hidden w-full max-w-md">
+          <nav className="md:flex-between hidden w-full max-w-sm">
             <NavItems />
           </nav>
 
