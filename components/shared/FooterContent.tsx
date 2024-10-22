@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const FooterContent = () => {
   return (
-    <div className="h-[50rem] md:h-[30rem] rounded-md bg-zinc-950 flex flex-col relative w-full">
+    <div className="h-[50rem] md:h-[30rem] rounded-md bg-zinc-950 flex flex-col relative w-full mt-8">
       <ShootingStars />
       <StarsBackground />
       <div className="wrapper md:flex">

@@ -1,35 +1,41 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import NavItems from "./NavItems";
 import MobileNav from "./MobileNav";
+import NavItems from "./NavItems";
 
 const Header = () => {
   return (
-    <>
-      <header className="w-full">
-        <div className="max-w-7xl lg:mx-auto p-3 md:px-10 xl:px-0 flex items-center justify-between">
-          <Link href="/" className="">
-            <div className="flex">
-              <Image
-                src="/assets/images/ypjenglish.png"
-                width={150}
-                height={38}
-                alt="YPJ Logo"
-              />
-            </div>
-          </Link>
-
-          <nav className="md:flex-between hidden w-full max-w-sm">
-            <NavItems />
-          </nav>
-
-          <div className="md:hidden flex w-32 justify-end gap-3">
-            <MobileNav />
+    <nav className="block w-full max-w-sm md:max-w-7xl px-5 py-2 mx-auto bg-zinc-950 bg-opacity-70 sticky top-3 shadow lg:px-8 lg:py-2 backdrop-blur-lg backdrop-saturate-150 z-[50] rounded-2xl">
+      <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
+        <Link href="/" className="">
+          <div className="flex">
+            <Image
+              src="/assets/images/ypjenglish.png"
+              width={130}
+              height={30}
+              alt="YPJ Logo"
+            />
           </div>
+        </Link>
+        <div className="hidden lg:block">
+          <NavItems />
         </div>
-      </header>
-    </>
+        <div className="hidden md:flex justify-end gap-3">
+          <button
+            type="button"
+            className="bg-gradient-to-r from-start-gold via-mid-gold to-end-gold hover:bg-end-gold focus:ring-4 focus:outline-none focus:ring-start-gold rounded-lg text-base px-4 py-2 text-center text-zinc-900 font-bold"
+          >
+            Get started
+          </button>
+        </div>
+
+        <div className="md:hidden flex justify-center items-center mr-4">
+          <MobileNav />
+        </div>
+      </div>
+    </nav>
   );
 };
 
