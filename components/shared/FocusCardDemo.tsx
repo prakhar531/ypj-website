@@ -1,20 +1,15 @@
 import { FocusCards } from "@/components/ui/focus-cards";
+interface Card {
+  title: string;
+  src: string;
+}
 
-export function FocusCardsDemo() {
-  const cards = [
-    {
-      title: "Forest Adventure",
-      src: "/assets/images/hero/heroDemo2.jpeg",
-    },
-    {
-      title: "Valley of life",
-      src: "/assets/images/hero/heroDemo3.jpeg",
-    },
-    {
-      title: "Sala behta hi jayega",
-      src: "/assets/images/hero/heroDemo4.jpeg",
-    },
-  ];
+// Define props for FocusCardsDemo to accept an array of cards
+interface FocusCardsDemoProps {
+  cards: Card[];
+}
 
+// Component accepts cards as props
+export function FocusCardsDemo({ cards }: FocusCardsDemoProps) {
   return <FocusCards cards={cards} />;
 }
