@@ -1,6 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import BlurFade from "./blur-fade";
 
 interface TimelineEntry {
   title: string;
@@ -33,12 +34,17 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-5 px-4 md:px-8 lg:px-10">
-        <div className="text-4xl md:text-6xl mb-4 max-w-4xl text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text font-bold">
-          About Us
+        <div className="flex flex-col justify-center items-center">
+          <BlurFade delay={0.2} inView>
+            <div className="text-4xl md:text-6xl mb-1 max-w-4xl text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text font-bold">
+              About Us
+            </div>
+          </BlurFade>
+
+          <p className="text-neutral-300 text-sm md:text-lg max-w-lg">
+            A complete journey of our Evolution.
+          </p>
         </div>
-        <p className="text-neutral-300 text-sm md:text-lg max-w-lg">
-          A complete journey of our Evolution.
-        </p>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

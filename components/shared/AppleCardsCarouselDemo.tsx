@@ -1,9 +1,19 @@
 "use client";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import Image from "next/image";
 import { FocusCardsDemo } from "./FocusCardDemo";
-import { goldRings } from "@/constants/item";
+import {
+  diamondNecklace,
+  diamondRing,
+  goldBracelet,
+  goldChain,
+  goldEarrings,
+  goldMangalsutra,
+  goldNecklace,
+  goldNoseRings,
+  goldRing,
+} from "@/constants/item";
+import BlurFade from "../ui/blur-fade";
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -13,11 +23,15 @@ export function AppleCardsCarouselDemo() {
   return (
     <div className="w-full py-10">
       <div className="wrapper mx-auto py-5 md:px-2 lg:px-4 ">
-        <div className="text-4xl md:text-6xl mb-4 max-w-4xl text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text font-bold">
-          Our Products
-        </div>
-        <div className="text-neutral-300 text-sm md:text-lg max-w-lg ml-2">
-          A sublime masterpiece of craftsmanship.
+        <div className="flex flex-col justify-center items-center">
+          <BlurFade delay={0.2} inView>
+            <div className="text-4xl md:text-6xl mb-1 max-w-4xl text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text font-bold">
+              Our Products
+            </div>
+          </BlurFade>
+          <div className="text-neutral-300 text-sm md:text-lg max-w-lg ml-2">
+            A sublime masterpiece of craftsmanship.
+          </div>
         </div>
       </div>
 
@@ -25,79 +39,60 @@ export function AppleCardsCarouselDemo() {
     </div>
   );
 }
-const DummyContent = () => {
-  return (
-    <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
-            <p className="text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-200">
-                The first rule of Apple club is that you boast about Apple club.
-              </span>{" "}
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
-            </p>
-            <Image
-              src="/assets/images/jewelry/bracelet.jpeg"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
-          </div>
-        );
-      })}
-    </>
-  );
-};
 
 const data = [
   {
     category: "Gold",
     title: "Bracelet",
     src: "/assets/images/jewelry/bracelet.jpeg",
-    content: <DummyContent />,
+    content: <FocusCardsDemo cards={goldBracelet} />,
   },
   {
     category: "Gold",
     title: "Rings",
     src: "/assets/images/jewelry/ring.jpeg",
-    content: <FocusCardsDemo cards={goldRings} />,
+    content: <FocusCardsDemo cards={goldRing} />,
   },
   {
     category: "Gold",
-    title: "Bangles",
-    src: "/assets/images/jewelry/bangles.jpeg",
-    content: <DummyContent />,
+    title: "MangalSutra",
+    src: "/assets/items/mangalsutra/mangalsutra (17).jpeg",
+    content: <FocusCardsDemo cards={goldMangalsutra} />,
   },
   {
     category: "Gold",
     title: "Chain",
     src: "/assets/images/jewelry/chain.jpeg",
-    content: <DummyContent />,
+    content: <FocusCardsDemo cards={goldChain} />,
   },
   {
-    category: "Diamond",
-    title: "Rings",
-    src: "/assets/images/jewelry/dRings.jpeg",
-    content: <DummyContent />,
+    category: "Gold",
+    title: "Nose Ring",
+    src: "/assets/images/jewelry/covernoseri.jpeg",
+    content: <FocusCardsDemo cards={goldNoseRings} />,
   },
   {
     category: "Gold",
     title: "Earrings",
     src: "/assets/images/jewelry/earring.jpeg",
-    content: <DummyContent />,
+    content: <FocusCardsDemo cards={goldEarrings} />,
   },
   {
     category: "Gold",
     src: "/assets/images/jewelry/necklace.jpeg",
     title: "Necklace",
-    content: <DummyContent />,
+    content: <FocusCardsDemo cards={goldNecklace} />,
+  },
+  {
+    category: "Diamond",
+    src: "/assets/images/jewelry/dRings.jpeg",
+    title: "Rings",
+    content: <FocusCardsDemo cards={diamondRing} />,
+  },
+  {
+    category: "Diamond",
+    src: "/assets/items/dnecklace/dnecklace (6).jpeg",
+    title: "Necklace",
+    content: <FocusCardsDemo cards={diamondNecklace} />,
   },
 ];

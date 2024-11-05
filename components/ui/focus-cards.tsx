@@ -37,12 +37,16 @@ export const Card = React.memo(
       <div
         className={cn(
           "absolute inset-0 bg-black/50 flex items-end justify-between py-8 px-4 transition-opacity duration-300 ",
-          hovered === index ? "opacity-100" : "opacity-0"
+          hovered === index ? "opacity-100 " : "opacity-0"
         )}
       >
-        <div className="text-xl md:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
-          {card.title}
+        <div>
+          <div className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
+            {card.title}
+          </div>
+          <div className="text-base text-white">Available</div>
         </div>
+
         <button
           type="button"
           className="bg-gradient-to-r from-start-gold via-mid-gold to-end-gold hover:bg-end-gold focus:ring-4 focus:outline-none focus:ring-start-gold rounded-lg text-sm px-2 py-2 text-center text-zinc-900 font-bold"

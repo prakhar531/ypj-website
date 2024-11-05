@@ -7,7 +7,7 @@ import NavItems from "./NavItems";
 
 const Header = () => {
   return (
-    <nav className="block w-full max-w-sm md:max-w-7xl px-5 py-2 mx-auto bg-zinc-950 bg-opacity-70 sticky top-3 shadow lg:px-8 lg:py-2 backdrop-blur-lg backdrop-saturate-150 z-[50] rounded-2xl">
+    <nav className="block w-full max-w-sm md:max-w-7xl px-5 py-2 mx-auto bg-zinc-950 bg-opacity-70 sticky top-3 shadow lg:px-8 lg:py-2 backdrop-blur-lg backdrop-saturate-150 z-[50] ">
       <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
         <Link href="/" className="">
           <div className="flex">

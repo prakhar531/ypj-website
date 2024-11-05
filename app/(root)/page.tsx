@@ -1,5 +1,6 @@
 import { AppleCardsCarouselDemo } from "@/components/shared/AppleCardsCarouselDemo";
 import ContactUs from "@/components/shared/ContactUs";
+import { FeaturesSectionDemo } from "@/components/shared/FeatureSection";
 import FooterContent from "@/components/shared/FooterContent";
 import Header from "@/components/shared/Header";
 import { HeroHighlightDemo } from "@/components/shared/HeroHighlightDemo";
@@ -23,6 +24,8 @@ export default async function Home() {
         {" "}
         <AppleCardsCarouselDemo />
       </div>
+
+      <FeaturesSectionDemo />
 
       <InfiniteMovingCardsDemo />
       <Maps />
