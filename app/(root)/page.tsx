@@ -6,11 +6,13 @@ import Header from "@/components/shared/Header";
 import { HeroHighlightDemo } from "@/components/shared/HeroHighlightDemo";
 import { InfiniteMovingCardsDemo } from "@/components/shared/InfiniteMovingCardDemo";
 import Maps from "@/components/shared/Maps";
+import OfferNavbar from "@/components/shared/OfferNavbar";
 import { TimelineDemo } from "@/components/shared/TimelineDemo";
 
 export default async function Home() {
   return (
     <>
+      <OfferNavbar />
       <Header />
       <div id="home">
         <HeroHighlightDemo />
