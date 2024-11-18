@@ -14,11 +14,13 @@ export const Card = React.memo(
     index,
     hovered,
     setHovered,
+    showContactUs,
   }: {
     card: CardType;
     index: number;
     hovered: number | null;
     setHovered: React.Dispatch<React.SetStateAction<number | null>>;
+    showContactUs: boolean;
   }) => (
     <div
       onMouseEnter={() => setHovered(index)}
@@ -46,13 +48,14 @@ export const Card = React.memo(
           </div>
           <div className="text-base text-white">Available</div>
         </div>
-
-        <button
-          type="button"
-          className="bg-gradient-to-r from-start-gold via-mid-gold to-end-gold hover:bg-end-gold focus:ring-4 focus:outline-none focus:ring-start-gold rounded-lg text-sm px-2 py-2 text-center text-zinc-900 font-bold"
-        >
-          Contact Us
-        </button>
+        {showContactUs && (
+          <button
+            type="button"
+            className="bg-gradient-to-r from-start-gold via-mid-gold to-end-gold hover:bg-end-gold focus:ring-4 focus:outline-none focus:ring-start-gold rounded-lg text-sm px-2 py-2 text-center text-zinc-900 font-bold"
+          >
+            Contact Us
+          </button>
+        )}
       </div>
     </div>
   )
@@ -65,7 +68,13 @@ type Card = {
   src: string;
 };
 
-export function FocusCards({ cards }: { cards: Card[] }) {
+export function FocusCards({
+  cards,
+  showContactUs,
+}: {
+  cards: Card[];
+  showContactUs: boolean;
+}) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
@@ -77,6 +86,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
           index={index}
           hovered={hovered}
           setHovered={setHovered}
+          showContactUs={showContactUs}
         />
       ))}
     </div>

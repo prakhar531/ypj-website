@@ -109,7 +109,7 @@ export function TimelineDemo() {
             business integrity. This commitment to staying ahead of the curve
             has only strengthened the trust our customers place in us.
           </div>
-          <FocusCardsDemo cards={demoCards} />;{" "}
+          <FocusCardsDemo cards={demoCards} showContactUs={false} />;{" "}
         </>
       ),
     },
@@ -138,7 +138,7 @@ export function TimelineDemo() {
             leading destination for gold, silver, and diamond jewelry in Hilsa,
             Nalanda.
           </div>
-          <FocusCardsDemo cards={demoCards} />;
+          <FocusCardsDemo cards={demoCards} showContactUs={false} />;
         </>
       ),
     },

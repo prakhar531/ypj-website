@@ -4,6 +4,7 @@ import React from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-caard";
 import { HeroHighlight } from "../ui/hero-highlight";
 import { FlipWords } from "../ui/flip-word";
+import BlurFade from "../ui/blur-fade";
 
 export function InfiniteMovingCardsDemo() {
   const words = [
@@ -19,12 +20,14 @@ export function InfiniteMovingCardsDemo() {
       <div className="mx-auto py-28 md:px-2 lg:px-4 md:py-32" id="testimonials">
         <div className="flex flex-col gap-2 justify-center items-center">
           <div className="text-3xl md:text-6xl mb-4 max-w-4xl font-bold">
-            <div className="heading text-white">
-              Kind words from{" "}
-              <span className="text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text">
-                Happy clients
-              </span>
-            </div>
+            <BlurFade delay={0.2} inView>
+              <div className="heading text-white">
+                Our{" "}
+                <span className="text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text">
+                  Happy clients
+                </span>
+              </div>
+            </BlurFade>
           </div>
           <FlipWords
             words={words}
@@ -47,31 +50,32 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "The experience was simply remarkable! Each piece of jewelry felt like it held a unique story of its own.",
+    name: "Arya Sharma",
+    title: "Happy Customer",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+      "The craftsmanship and design are so intricate and beautiful, it captures everyone’s heart. Truly a work of art!",
+    name: "Vikram Gupta",
+    title: "Satisfied Customer",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+      "There's something special for every occasion here. Visiting Yogendra Prasad Jewellers brought me pure joy.",
+    name: "Neha Mehta",
+    title: "Regular Customer",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "The sparkle and quality of the jewelry here is unmatched. This is a place I trust wholeheartedly.",
+    name: "Arjun Singh",
+    title: "Loyal Customer",
+  },
+  {
+    quote:
+      "From my first visit, it felt like home. The jewelry here truly touches the soul.",
+    name: "Sakshi Mishra",
+    title: "First-Time Customer",
   },
 ];

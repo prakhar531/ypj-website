@@ -59,13 +59,6 @@ export const footerContactUS = [
     links: "mailto:prakhararya531@gmail.com",
     content: "aryarakesh511@gmail.com",
   },
-  // {
-  //   id: 3,
-  //   title: "Chat with us",
-  //   img: "/assets/social/message.svg",
-  //   links: "https://github.com/prakhar531",
-  //   content: ""
-  // },
   {
     id: 3,
     title: "Location",

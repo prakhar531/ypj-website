@@ -13,12 +13,15 @@ const FooterContent = () => {
       <StarsBackground />
       <div className="wrapper md:flex">
         <div className="w-full md:w-1/3">
-          <ThreeDCardDemo />
+          <div className="flex justify-center">
+            <ThreeDCardDemo />
+          </div>
+
           {/* <div className="text-slate-200 text-2xl font-semibold flex justify-center">
             GST: 10AGSPK8041MIZ4
           </div> */}
           <div className="flex gap-6 w-full justify-center">
-            <div className="font-semibold text-slate-200 my-4 text-xl">
+            <div className="font-semibold text-neutral-300 my-4 text-xl">
               Follow Us On:
             </div>
             <div className="flex md:gap-3 gap-2">
@@ -28,7 +31,7 @@ const FooterContent = () => {
                     className="flex gap-4 flex-start items-center"
                     key={info.id}
                   >
-                    <div className="w-[40px] h-[40px] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 rounded-lg border border-black-300 p-2 ">
+                    <div className="w-[40px] h-[40px] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 rounded-lg border border-zinc-500 p-2 ">
                       <a href={info.links}>
                         <Image
                           src={info.img}
@@ -54,7 +57,7 @@ const FooterContent = () => {
                 return (
                   <li
                     key={link.route}
-                    className={`flex-center whitespace-nowrap text-slate-200`}
+                    className={`flex-center whitespace-nowrap text-neutral-300 hover:text-neutral-100`}
                   >
                     <Link href={link.route}>{link.label}</Link>
                   </li>
@@ -74,7 +77,7 @@ const FooterContent = () => {
                   className="flex gap-4 flex-start items-center"
                   key={info.id}
                 >
-                  <div className="w-[54px] h-[54px] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 rounded-lg border border-black-300 p-2">
+                  <div className="w-[54px] h-[54px] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 rounded-lg border border-zinc-500 p-2">
                     <a href={info.links}>
                       <Image
                         src={info.img}
@@ -84,14 +87,14 @@ const FooterContent = () => {
                       />
                     </a>
                   </div>
-                  <div className="flex flex-col">
-                    <div className="text-lg font-bold text-white">
+                  <a href={info.links} className="flex flex-col cursor-pointer">
+                    <div className="text-lg font-bold text-neutral-300">
                       {info.title}
                     </div>
-                    <div className="text-base text-slate-200">
+                    <div className="text-base text-neutral-400 hover:text-neutral-200">
                       {info.content}
                     </div>
-                  </div>
+                  </a>
                 </div>
               );
             })}

@@ -1,16 +1,19 @@
 import React from "react";
+import BlurFade from "../ui/blur-fade";
 
 const Maps = () => {
   return (
     <div className="w-full mx-auto py-10 md:px-2 lg:px-4 md:py-24">
       <div className="hidden md:flex flex-col gap-2 justify-center items-center">
         <div className="text-3xl md:text-6xl mb-4 max-w-4xl font-bold">
-          <div className="heading text-white">
-            Visit our{" "}
-            <span className="text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text">
-              Store
-            </span>
-          </div>
+          <BlurFade delay={0.2} inView>
+            <div className="heading text-white">
+              Visit our{" "}
+              <span className="text-transparent bg-gradient-to-r from-start-gold via-mid-gold to-end-gold bg-clip-text">
+                Store
+              </span>
+            </div>
+          </BlurFade>
         </div>
       </div>
       <div

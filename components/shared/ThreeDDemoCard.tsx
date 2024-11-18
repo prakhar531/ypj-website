@@ -12,7 +12,7 @@ export function ThreeDCardDemo() {
           <Image
             src="/assets/images/ypjenglish.png"
             height="500"
-            width="500"
+            width="400"
             className="object-cover inset-0 rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
